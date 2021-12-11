@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:padding="20dp"
+        android:background="@drawable/bg_top">
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_baseline_person_24" />
+
+        <TextView
+            android:id="@+id/Name_of_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="19dp"
+            android:layout_marginLeft="19dp"
+            android:layout_marginTop="40dp"
+            android:layout_toEndOf="@+id/profile_image"
+            android:layout_toRightOf="@+id/profile_image"
+            android:fontFamily="sans-serif-black"
+            android:includeFontPadding="false"
+            android:text="@string/name_of_user"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/Username_of_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Name_of_user"
+            android:layout_marginLeft="19dp"
+            android:layout_marginTop="1dp"
+            android:layout_toRightOf="@+id/profile_image"
+            android:includeFontPadding="false"
+            android:text="@string/username_of_the_user"
+            android:textColor="#F1DFDF"
+            android:textSize="20sp" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-120dp"
+        android:layout_width="match_parent"
+        android:padding="20dp">
+
+        <!--For Payment-->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_height="125dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            app:cardBackgroundColor="#ff4e47"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_baseline_payment_24" />
+
+                <TextView
+                    android:id="@+id/payment_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="sans-serif-black"
+                    android:includeFontPadding="false"
+                    android:text="@string/rs_15_000"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/payment_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/payment_price"
+                    android:layout_centerHorizontal="true"
+                    android:includeFontPadding="false"
+                    android:text="@string/per_month"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!--Time-->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_height="125dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            app:cardBackgroundColor="#ff4e47"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_baseline_access_time_24"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="sans-serif-black"
+                    android:includeFontPadding="false"
+                    android:text="@string/full_time"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/work_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/duration"
+                    android:layout_centerHorizontal="true"
+                    android:includeFontPadding="false"
+                    android:text="@string/_9am_7pm"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="vertical">
+
+        <!--Address-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/address_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/address">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:drawableLeft="@drawable/ic_baseline_home_work_24"
+                android:drawablePadding="10dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/_1251_w_university_ave_flagstaff_arkansas_86001_uk" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Email-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email_id">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:drawableLeft="@drawable/ic_baseline_email_24"
+                android:drawablePadding="10dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/abc52_gmail_com" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!--Contact-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/contact_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/contact_no">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:drawableLeft="@drawable/ic_baseline_add_ic_call_24"
+                android:drawablePadding="10dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/_91_54875_25698" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Requirements-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/requirements_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/requirements">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:drawableLeft="@drawable/ic_baseline_perm_device_information_24"
+                android:drawablePadding="10dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/in_search_of_an_experienced_househelper_who_can_manage_baby_sitting_as_well_as_household_chores" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/update_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/update" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+
+
+
+
+
