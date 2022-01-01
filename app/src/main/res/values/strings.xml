@@ -15,4 +15,11 @@
     <string name="in_search_of_an_experienced_househelper_who_can_manage_baby_sitting_as_well_as_household_chores">In search of an experienced househelper who can manage baby sitting as well as household chores.Also who is available early morning , sometime at 8 am</string>
     <string name="update">UPDATE</string>
     <string name="_91_54875_25698">+91 54875 25698</string>
+    <string name="Submit">Submit</string>
+    <string name="complain_title">Enter your complain here</string>
+    <string name="complain_text">I have a complain about this worker .................................................................................................................... blah blah blah</string>
+    <string name="name_of_worker_complain_title"> Enter worker\'s name </string>
+    <string name="name_of_worker_complain">John Doe</string>
+    <string name="worker_id_complain_title">Enter worker\'s id / username</string>
+    <string name="worker_id_complain">john.doe2</string>
 </resources>
